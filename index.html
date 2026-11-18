@@ -3,196 +3,335 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Confort Habitat Devis – Devis gratuit plomberie, chauffage, climatisation en Poitou-Charentes</title>
-<meta name="description" content="Choisissez votre projet (chauffe-eau, salle de bain, climatisation, pompe à chaleur…) et recevez un devis gratuit d'un artisan de Charente, Charente-Maritime, Vienne, Deux-Sèvres, Dordogne ou Haute-Vienne.">
+<title>Confort Habitat Devis – Devis gratuit plomberie, chauffage, climatisation</title>
+<meta name="description" content="Chauffe-eau, salle de bain, climatisation, pompe à chaleur… Choisissez votre projet, un artisan de Charente, Charente-Maritime, Vienne, Deux-Sèvres, Dordogne ou Haute-Vienne vous rappelle pour un devis gratuit.">
+<meta name="theme-color" content="#0c2a36">
 <style>
-:root{--ink:#10243a;--blue:#0f5fa8;--blue2:#0b4a85;--sun:#f28c28;--bg:#f5f8fb;--card:#fff;--line:#dbe4ee;--ok:#1d8f5a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-a{color:var(--blue)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:22px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
-.logo span{color:var(--sun)}
-.btn{display:inline-block;background:var(--sun);color:#fff;font-weight:700;border:0;border-radius:10px;padding:14px 26px;font-size:17px;text-decoration:none;cursor:pointer}
-.btn:hover{filter:brightness(.95)}
-.btn.sm{padding:10px 18px;font-size:15px}
-.hero{background:linear-gradient(135deg,#0b3a66,#0f5fa8);color:#fff;padding:64px 0 72px}
-.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:0 0 16px;letter-spacing:-1px}
-.hero p{font-size:19px;max-width:620px;margin:0 0 28px;opacity:.95}
-.badges{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:15px}
-.badges div:before{content:"✓ ";color:#ffc477;font-weight:800}
-section{padding:56px 0}
-h2{font-size:clamp(25px,3.6vw,34px);letter-spacing:-.6px;margin:0 0 10px}
-.lead{color:#46607a;margin:0 0 30px;font-size:18px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-.step b{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;align-items:center;justify-content:center;margin-bottom:10px}
-.formbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(16,36,58,.07)}
-fieldset{border:0;padding:0;margin:0 0 26px}
-legend{font-weight:800;font-size:19px;margin-bottom:12px;padding:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
-.cards label{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:#fff;transition:.15s}
-.cards label:hover{border-color:#9bb9d6}
-.cards input{margin-top:4px;width:19px;height:19px;accent-color:var(--blue);flex:none}
-.cards label:has(input:checked){border-color:var(--blue);background:#eef5fc}
-.cards .t{font-weight:700;display:block}.cards .d{font-size:14px;color:#52697f;display:block}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:640px){.grid2{grid-template-columns:1fr}.formbox{padding:20px}}
-.f label{display:block;font-weight:600;font-size:15px;margin-bottom:5px}
-.f input,.f select,.f textarea{width:100%;font:inherit;padding:13px;border:1.5px solid #b9c8d8;border-radius:10px;background:#fff}
-.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid #b8d6f3;border-color:var(--blue)}
-.f{margin-bottom:14px}
-.rgpd{font-size:13.5px;color:#52697f;margin:6px 0 18px}
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:10px 0 18px}
-.consent input{margin-top:3px;width:18px;height:18px}
-.msg{display:none;padding:16px;border-radius:10px;margin-top:16px;font-weight:600}
-.msg.ok{background:#e6f6ee;color:#14633f;display:block}.msg.ko{background:#fdeaea;color:#8a1f1f;display:block}
-.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.tbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
-.tbox .n{font-size:34px;font-weight:800;color:var(--blue)}
-.zones{display:flex;flex-wrap:wrap;gap:10px}.zones span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600}
-details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
-summary{font-weight:700;cursor:pointer}
-footer{background:#0c1d30;color:#b8c7d8;padding:38px 0;font-size:14.5px}
-footer a{color:#fff}
+:root{
+  --deep:#0c2a36;      /* eau profonde */
+  --deep2:#12394a;
+  --mist:#f1f5f6;      /* brume */
+  --paper:#ffffff;
+  --ink:#10242d;
+  --soft:#5b727c;
+  --line:#d9e3e6;
+  --cool:#6fb8d4;      /* froid */
+  --warm:#f0a24a;      /* chaud */
+  --flame:#e4733a;
+  --ok:#1b8a5a;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 var(--sans);color:var(--ink);background:var(--mist);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--warm);outline-offset:3px;border-radius:6px}
+
+/* barre de température : fil conducteur de la page */
+.thermo{height:5px;background:linear-gradient(90deg,var(--cool),#a7d4c9 40%,var(--warm) 75%,var(--flame))}
+
+header{position:absolute;inset:5px 0 auto 0;z-index:5}
+.nav{display:flex;justify-content:space-between;align-items:center;height:84px}
+.brand{font-family:var(--serif);font-size:23px;color:#fff;text-decoration:none;letter-spacing:.2px}
+.brand small{display:block;font:500 12px/1 var(--sans);opacity:.7;letter-spacing:.3px;margin-top:5px}
+.tel{color:#fff;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.35);padding:10px 18px;border-radius:999px;font-size:15px;transition:.2s}
+.tel{white-space:nowrap}.tel:hover{background:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(1200px 500px at 85% 110%,rgba(240,162,74,.28),transparent 60%),radial-gradient(900px 500px at 0% 0%,rgba(111,184,212,.22),transparent 60%),var(--deep);color:#fff;padding:170px 0 120px;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:90px;background:linear-gradient(to bottom,transparent,var(--mist))}
+.hero h1{font:400 clamp(38px,6.4vw,74px)/1.04 var(--serif);letter-spacing:-1.2px;margin:0 0 26px;max-width:15ch}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:46ch;color:#cfe0e6;margin:0 0 38px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--warm),var(--flame));color:#2a1204;font-weight:700;font-size:17px;padding:17px 30px;border:0;border-radius:999px;text-decoration:none;cursor:pointer;box-shadow:0 12px 30px rgba(228,115,58,.32);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(228,115,58,.4)}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+.btn.ghost{background:transparent;color:var(--deep);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--deep);box-shadow:none}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:46px;color:#b9d0d8;font-size:15px}
+.hero-meta b{color:#fff;font-weight:600}
+/* gouttes de chaleur / eau décoratives (apparition unique au chargement) */
+.orb{position:absolute;right:-120px;top:90px;width:560px;height:560px;border-radius:50%;background:conic-gradient(from 210deg,rgba(111,184,212,.0),rgba(111,184,212,.35),rgba(240,162,74,.45),rgba(228,115,58,.0));filter:blur(40px);opacity:0;animation:orb 1.8s .1s ease-out forwards}
+@keyframes orb{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.orb{animation:none;opacity:1}html{scroll-behavior:auto}.btn{transition:none}}
+
+section{padding:96px 0}
+h2{font:400 clamp(30px,4.2vw,46px)/1.1 var(--serif);letter-spacing:-.8px;margin:0 0 16px;color:var(--deep)}
+.lead{color:var(--soft);max-width:56ch;margin:0 0 48px;font-size:19px}
+
+/* formulaire en 3 étapes */
+#devis{padding-top:30px}
+.panel{background:var(--paper);border-radius:26px;box-shadow:0 30px 80px -30px rgba(12,42,54,.35);overflow:hidden;display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr)}
+.side{background:linear-gradient(170deg,var(--deep),var(--deep2));color:#d7e6eb;padding:44px 36px;position:relative}
+.side h3{font:400 28px/1.15 var(--serif);color:#fff;margin:0 0 14px}
+.side p{margin:0 0 28px;font-size:16px}
+.side ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;font-size:15.5px}
+.side li{display:flex;gap:12px}
+.side li svg{flex:none;width:22px;height:22px;color:var(--warm);margin-top:2px}
+.formside{padding:44px 44px 36px}
+.prog{display:flex;gap:8px;margin-bottom:8px}
+.prog i{flex:1;height:5px;border-radius:5px;background:var(--line);transition:background .3s}
+.prog i.on{background:linear-gradient(90deg,var(--cool),var(--warm))}
+.stepname{color:var(--soft);font-size:14.5px;margin:0 0 26px}
+.step{display:none;animation:fade .35s ease}
+.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step{animation:none}}
+.step h3{font:400 28px/1.2 var(--serif);margin:0 0 6px;color:var(--deep)}
+.step .hint{color:var(--soft);margin:0 0 22px;font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.cards label{position:relative;display:block;cursor:pointer}
+.cards input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.cards .c{display:flex;flex-direction:column;gap:10px;height:100%;padding:18px;border:1.5px solid var(--line);border-radius:16px;background:#fff;transition:border-color .2s,background .2s,box-shadow .2s}
+.cards .c svg{width:32px;height:32px;color:var(--deep2)}
+.cards .t{font-weight:650;line-height:1.25;color:var(--deep)}
+.cards .d{font-size:14px;color:var(--soft);line-height:1.4}
+.cards label:hover .c{border-color:#9fc0cb}
+.cards input:checked + .c{border-color:var(--flame);background:linear-gradient(180deg,#fff7ef,#fff);box-shadow:0 8px 24px -10px rgba(228,115,58,.5)}
+.cards input:checked + .c svg{color:var(--flame)}
+.cards input:focus-visible + .c{outline:3px solid var(--warm);outline-offset:2px}
+.cards .c:after{content:"";position:absolute;right:12px;top:12px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);background:#fff;transition:.2s}
+.cards input:checked + .c:after{background:var(--flame) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>") center/14px no-repeat;border-color:var(--flame)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{margin-bottom:16px}
+.f label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;color:var(--deep)}
+.f input,.f select,.f textarea{width:100%;font:inherit;color:var(--ink);padding:15px 16px;border:1.5px solid #c3d2d7;border-radius:12px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--deep2);box-shadow:0 0 0 4px rgba(111,184,212,.3)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--soft);margin:6px 0 4px}
+.consent input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--flame)}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:26px;align-items:center}
+.msg{display:none;margin-top:18px;padding:16px 18px;border-radius:12px;font-weight:600;font-size:16px}
+.msg.ok{display:block;background:#e5f5ec;color:#115c3a}
+.msg.ko{display:block;background:#fdecea;color:#8a2417}
 .hp{position:absolute;left:-9999px}
+.fine{font-size:13.5px;color:var(--soft);margin:18px 0 0}
+
+/* déroulé */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.flow:before{content:"";position:absolute;left:8%;right:8%;top:27px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--cool),var(--warm),var(--flame));opacity:.55}
+.flow div{position:relative;padding:0 24px;text-align:center}
+.flow .dot{width:56px;height:56px;border-radius:50%;margin:0 auto 20px;background:#fff;border:3px solid var(--mist);display:grid;place-items:center;font:400 24px var(--serif);color:var(--deep);box-shadow:0 0 0 2px var(--line)}
+.flow h3{font:400 24px/1.2 var(--serif);margin:0 0 8px;color:var(--deep)}
+.flow p{margin:0 auto;color:var(--soft);max-width:30ch}
+
+/* confiance */
+.proof{background:var(--deep);color:#d7e6eb;border-radius:30px;padding:64px 56px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.proof h2{color:#fff}
+.proof .lead{color:#b9d0d8;margin-bottom:0}
+.scores{display:grid;gap:14px}
+.score{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(255,255,255,.16);border-radius:18px;text-decoration:none;transition:background .2s}
+.score:hover{background:rgba(255,255,255,.07)}
+.score b{font:400 34px/1 var(--serif);color:#fff}
+.score span{font-size:15px;color:#b9d0d8;display:block}
+.stars{color:var(--warm);letter-spacing:3px;font-size:15px}
+
+/* zone */
+.zones{display:flex;flex-wrap:wrap;gap:12px}
+.zones span{padding:12px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;color:var(--deep)}
+
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font:400 22px/1.3 var(--serif);color:var(--deep);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font:300 30px/1 var(--sans);color:var(--flame);transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:14px 0 0;color:var(--soft);max-width:60ch}
+
+footer{background:var(--deep);color:#a9c1ca;padding:56px 0 40px;font-size:15px}
+footer b{font:400 22px var(--serif);color:#fff;display:block;margin-bottom:10px}
+footer a{color:#fff}
+footer .thermo{margin-bottom:46px}
+
+@media (max-width:900px){
+  .panel{grid-template-columns:1fr}
+  .side{padding:32px 28px}
+  .formside{padding:30px 22px 26px}
+  .proof{grid-template-columns:1fr;padding:40px 26px;gap:32px}
+  .flow{grid-template-columns:1fr;gap:34px}.flow:before{display:none}
+  section{padding:70px 0}
+  .hero{padding:140px 0 100px}
+}
+@media (max-width:560px){.brand{font-size:19px}.brand small{display:none}.tel{padding:9px 14px;font-size:14px}.grid2{grid-template-columns:1fr}.tel span{display:none}.cards{grid-template-columns:1fr 1fr}.cards .d{display:none}}
 </style>
 </head>
 <body>
+<div class="thermo" aria-hidden="true"></div>
 <header><div class="wrap nav">
-  <a class="logo" href="#">Confort<span>Habitat</span>Devis</a>
-  <a class="btn sm" href="#devis">Devis gratuit</a>
+  <a class="brand" href="#">Confort Habitat Devis<small>Plomberie · Chauffage · Climatisation</small></a>
+  <a class="tel" href="tel:+33633827272"><span>Nous appeler : </span>06 33 82 72 71</a>
 </div></header>
 
-<div class="hero"><div class="wrap">
-  <h1>Votre projet plomberie, chauffage ou climatisation. Un artisan vous rappelle.</h1>
-  <p>Cochez ce qui vous intéresse, laissez vos coordonnées : un artisan de votre secteur vous recontacte pour étudier votre projet et vous établir un devis gratuit.</p>
-  <a class="btn" href="#devis">Choisir mon projet</a>
-  <div class="badges">
-    <div>Devis 100 % gratuit et sans engagement</div>
-    <div>Plus de 470 avis clients, notés 4,9/5</div>
-    <div>Rappel rapide du lundi au samedi</div>
+<div class="hero">
+  <div class="orb" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <h1>Un logement bien chauffé, bien rafraîchi, sans vous compliquer la vie.</h1>
+    <p>Dites-nous ce qui vous intéresse. Un artisan vous rappelle, étudie votre projet avec vous et vous remet un devis détaillé, gratuit et sans engagement.</p>
+    <a class="btn" href="#devis">Demander mon devis gratuit</a>
+    <div class="hero-meta">
+      <span><b>4,9/5</b> sur plus de 470 avis clients</span>
+      <span>Rappel du <b>lundi au samedi</b></span>
+      <span>Charente, Charente-Maritime, Vienne, Deux-Sèvres, Dordogne, Haute-Vienne</span>
+    </div>
   </div>
-</div></div>
+</div>
 
-<section><div class="wrap">
-  <h2>Comment ça marche</h2>
-  <p class="lead">Trois étapes, moins de deux minutes.</p>
-  <div class="steps">
-    <div class="step"><b>1</b><h3 style="margin:0 0 6px">Vous choisissez</h3>Chauffe-eau, salle de bain, climatisation… vous cochez ce qui vous intéresse.</div>
-    <div class="step"><b>2</b><h3 style="margin:0 0 6px">Vous nous laissez vos coordonnées</h3>Votre commune, votre téléphone et un mot sur votre projet si vous le souhaitez.</div>
-    <div class="step"><b>3</b><h3 style="margin:0 0 6px">On vous rappelle</h3>Un artisan vous appelle, étudie votre besoin et vous envoie un devis détaillé gratuit.</div>
+<section id="devis"><div class="wrap">
+  <div class="panel">
+    <aside class="side">
+      <h3>Votre devis, en trois étapes</h3>
+      <p>Une minute suffit. Vous ne payez rien et ne vous engagez à rien.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Devis détaillé et gratuit</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Un artisan qui vous rappelle, pas un robot</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Vos données ne sont jamais revendues</li>
+      </ul>
+    </aside>
+
+    <form id="lead" class="formside" novalidate>
+      <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <p class="stepname" id="stepname" aria-live="polite">Étape 1 sur 3</p>
+
+      <div class="step on" data-step="1">
+        <h3>Quel est votre projet ?</h3>
+        <p class="hint">Cochez tout ce qui vous intéresse.</p>
+        <div class="cards" role="group" aria-label="Projets">
+          <label><input type="checkbox" name="projet" value="Dépannage plomberie"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c4 6 7 9.5 7 13.5a7 7 0 0 1-14 0C9 13.500 12 10 16 4z"/><path d="M13 19a3 3 0 0 0 3 3"/></svg><span class="t">Dépannage plomberie</span><span class="d">Fuite, WC, robinetterie, débouchage</span></span></label>
+          <label><input type="checkbox" name="projet" value="Chauffe-eau électrique"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="16" height="26" rx="5"/><path d="M13 12l3-3 3 3M16 9v8M13 22h6"/></svg><span class="t">Chauffe-eau électrique</span><span class="d">Remplacement ou installation</span></span></label>
+          <label><input type="checkbox" name="projet" value="Chauffe-eau thermodynamique"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="16" height="26" rx="5"/><path d="M12 14a4 4 0 0 1 8 0M12 19a4 4 0 0 0 8 0M10.500 16.500h11"/></svg><span class="t">Chauffe-eau thermodynamique</span><span class="d">Moins de consommation d'électricité</span></span></label>
+          <label><input type="checkbox" name="projet" value="Climatisation réversible"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="9" rx="3"/><path d="M9 20c0 2-1.500 2.500-1.500 4.500M16 20v6M23 20c0 2 1.500 2.500 1.500 4.500"/></svg><span class="t">Climatisation réversible</span><span class="d">Frais l'été, chaud l'hiver</span></span></label>
+          <label><input type="checkbox" name="projet" value="Pompe à chaleur"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="24" height="18" rx="3"/><circle cx="16" cy="16" r="5"/><path d="M16 11v10M11 16h10"/></svg><span class="t">Pompe à chaleur</span><span class="d">Chauffage économique</span></span></label>
+          <label><input type="checkbox" name="projet" value="Chaudière à condensation"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="20" height="26" rx="3"/><path d="M16 22c-3 0-4.500-2-4.500-4 0-3 4.500-4.500 4.500-9 2.500 2 4.500 5 4.500 9 0 2-1.500 4-4.500 4z"/></svg><span class="t">Chaudière à condensation</span><span class="d">Remplacement de chaudière</span></span></label>
+          <label><input type="checkbox" name="projet" value="Salle de bain clé en main"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h22v3a6 6 0 0 1-6 6H11a6 6 0 0 1-6-6v-3zM9 17V8a3 3 0 0 1 6 0M8 29l1.500-3M24 29l-1.500-3"/></svg><span class="t">Salle de bain clé en main</span><span class="d">Rénovation complète</span></span></label>
+          <label><input type="checkbox" name="projet" value="Adoucisseur d'eau"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c3.500 5 6 8 6 11.500a6 6 0 0 1-12 0C10 12 12.500 9 16 4z"/><path d="M12 25h8M10 29h12"/></svg><span class="t">Adoucisseur d'eau</span><span class="d">Fini le calcaire</span></span></label>
+          <label><input type="checkbox" name="projet" value="Désembouage radiateurs"><span class="c"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v16M12 8v16M18 8v16M24 8v16M4 11h24M4 21h24"/></svg><span class="t">Désembouage radiateurs</span><span class="d">Radiateurs froids, chauffage qui force</span></span></label>
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <h3>Où se trouve votre logement ?</h3>
+        <p class="hint">Pour vous mettre en relation avec l'artisan le plus proche.</p>
+        <div class="grid2">
+          <div class="f"><label for="dep">Département</label>
+            <select id="dep" name="departement">
+              <option value="">Choisir…</option><option>Charente (16)</option><option>Charente-Maritime (17)</option><option>Vienne (86)</option><option>Deux-Sèvres (79)</option><option>Dordogne (24)</option><option>Haute-Vienne (87)</option>
+            </select></div>
+          <div class="f"><label for="ville">Commune</label><input id="ville" name="commune" placeholder="Ex. Angoulême" autocomplete="address-level2"></div>
+        </div>
+        <div class="f"><label for="note">Un détail à nous préciser ? (facultatif)</label><textarea id="note" name="message" rows="3" placeholder="Ex. maison de 100 m², ancien chauffe-eau de 200 L…"></textarea></div>
+      </div>
+
+      <div class="step" data-step="3">
+        <h3>Comment vous rappeler ?</h3>
+        <p class="hint">Un artisan vous appelle du lundi au samedi.</p>
+        <div class="grid2">
+          <div class="f"><label for="nom">Nom et prénom</label><input id="nom" name="nom" autocomplete="name"></div>
+          <div class="f"><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></div>
+        </div>
+        <div class="f"><label for="mail">Email</label><input id="mail" name="email" type="email" autocomplete="email"></div>
+        <label class="consent"><input type="checkbox" id="rgpd"><span>J'accepte d'être recontacté(e) par téléphone ou par email au sujet de ma demande. Je consulte la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.</span></label>
+      </div>
+
+      <div id="msg" class="msg" role="status"></div>
+      <div class="actions">
+        <button type="button" class="btn ghost" id="prev" style="visibility:hidden">Retour</button>
+        <button type="button" class="btn" id="next">Continuer</button>
+      </div>
+      <p class="fine">Gratuit et sans engagement. Votre demande est transmise uniquement à la société PLOMBIER 16, qui édite ce site.</p>
+    </form>
   </div>
 </div></section>
 
-<section id="devis" style="padding-top:10px"><div class="wrap">
-  <h2>Demandez votre devis gratuit</h2>
-  <p class="lead">Plusieurs choix possibles : cochez tout ce qui vous intéresse.</p>
-  <form id="lead" class="formbox" novalidate>
-    <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <fieldset>
-      <legend>1. Quel est votre projet ?</legend>
-      <div class="cards">
-        <label><input type="checkbox" name="projet" value="Dépannage plomberie"><span><span class="t">Dépannage plomberie</span><span class="d">Fuite, WC, robinetterie, débouchage…</span></span></label>
-        <label><input type="checkbox" name="projet" value="Chauffe-eau électrique"><span><span class="t">Chauffe-eau électrique</span><span class="d">Remplacement ou installation</span></span></label>
-        <label><input type="checkbox" name="projet" value="Chauffe-eau thermodynamique"><span><span class="t">Chauffe-eau thermodynamique</span><span class="d">Économisez sur l'eau chaude</span></span></label>
-        <label><input type="checkbox" name="projet" value="Climatisation réversible"><span><span class="t">Climatisation réversible</span><span class="d">Fraîcheur l'été, chauffage l'hiver</span></span></label>
-        <label><input type="checkbox" name="projet" value="Pompe à chaleur"><span><span class="t">Pompe à chaleur</span><span class="d">Chauffage économique</span></span></label>
-        <label><input type="checkbox" name="projet" value="Chaudière à condensation"><span><span class="t">Chaudière à condensation</span><span class="d">Remplacement de chaudière</span></span></label>
-        <label><input type="checkbox" name="projet" value="Salle de bain clé en main"><span><span class="t">Salle de bain clé en main</span><span class="d">Rénovation complète</span></span></label>
-        <label><input type="checkbox" name="projet" value="Adoucisseur d'eau"><span><span class="t">Adoucisseur d'eau</span><span class="d">Fini le calcaire</span></span></label>
-        <label><input type="checkbox" name="projet" value="Désembouage radiateurs"><span><span class="t">Désembouage radiateurs</span><span class="d">Radiateurs froids, chauffage qui force</span></span></label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>2. Où se situe votre logement ?</legend>
-      <div class="grid2">
-        <div class="f"><label for="dep">Département</label>
-          <select id="dep" name="departement" required>
-            <option value="">Choisir…</option>
-            <option>Charente (16)</option><option>Charente-Maritime (17)</option><option>Vienne (86)</option>
-            <option>Deux-Sèvres (79)</option><option>Dordogne (24)</option><option>Haute-Vienne (87)</option>
-          </select></div>
-        <div class="f"><label for="ville">Commune</label><input id="ville" name="commune" required placeholder="Ex. Angoulême"></div>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>3. Comment vous joindre ?</legend>
-      <div class="grid2">
-        <div class="f"><label for="nom">Nom et prénom</label><input id="nom" name="nom" required autocomplete="name"></div>
-        <div class="f"><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" required autocomplete="tel" placeholder="06 00 00 00 00"></div>
-      </div>
-      <div class="f"><label for="mail">Email</label><input id="mail" name="email" type="email" required autocomplete="email"></div>
-      <div class="f"><label for="note">Un détail à nous préciser ? (facultatif)</label><textarea id="note" name="message" rows="3" placeholder="Ex. maison de 100 m², ancien chauffe-eau de 200 L…"></textarea></div>
-    </fieldset>
-
-    <label class="consent"><input type="checkbox" id="rgpd" required><span>J'accepte d'être recontacté(e) par téléphone ou par email au sujet de ma demande. J'ai pris connaissance de la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.</span></label>
-    <button class="btn" type="submit" style="width:100%">Recevoir mon devis gratuit</button>
-    <p class="rgpd">Gratuit et sans engagement. Vos données sont transmises uniquement à la société PLOMBIER 16, éditrice de ce site, pour traiter votre demande.</p>
-    <div id="msg" class="msg" role="status"></div>
-  </form>
-</div></section>
-
-<section style="background:#fff"><div class="wrap">
-  <h2>Des artisans en qui les clients ont confiance</h2>
-  <p class="lead">Les avis sont publics : vous pouvez les vérifier vous-même.</p>
-  <div class="trust">
-    <div class="tbox"><div class="n">4,9/5</div>Trustpilot, 287 avis<br><a href="https://fr.trustpilot.com/review/plombier16.com" target="_blank" rel="noopener">Voir les avis</a></div>
-    <div class="tbox"><div class="n">4,9/5</div>Google Angoulême, 144 avis<br><a href="https://share.google/mNXVfgCHNm0Cpx5rf" target="_blank" rel="noopener">Voir les avis</a></div>
-    <div class="tbox"><div class="n">5,0/5</div>Google Royan, 44 avis<br><a href="https://share.google/32H5D1uRiKfB9meim" target="_blank" rel="noopener">Voir les avis</a></div>
+<section style="padding-top:20px"><div class="wrap">
+  <h2 style="text-align:center">Simple du début à la fin</h2>
+  <p class="lead" style="margin-inline:auto;text-align:center">Vous choisissez, on vous rappelle, vous recevez un devis clair.</p>
+  <div class="flow">
+    <div><div class="dot">1</div><h3>Vous choisissez</h3><p>Vos projets et votre commune, en moins d'une minute.</p></div>
+    <div><div class="dot">2</div><h3>On vous rappelle</h3><p>Un artisan échange avec vous pour bien comprendre votre besoin.</p></div>
+    <div><div class="dot">3</div><h3>Vous recevez votre devis</h3><p>Détaillé, gratuit, sans engagement. Vous décidez ensuite.</p></div>
   </div>
 </div></section>
 
-<section><div class="wrap">
+<section style="padding-top:20px"><div class="wrap">
+  <div class="proof">
+    <div>
+      <h2>Ne nous croyez pas sur parole.</h2>
+      <p class="lead">Plus de 470 clients ont laissé un avis public, notre note est de 4,9 à 5 sur 5. Vous pouvez tout vérifier vous-même.</p>
+    </div>
+    <div class="scores">
+      <a class="score" href="https://fr.trustpilot.com/review/plombier16.com" target="_blank" rel="noopener"><div><span>Trustpilot · 287 avis</span><span class="stars" aria-hidden="true">★★★★★</span></div><b>4,9/5</b></a>
+      <a class="score" href="https://share.google/mNXVfgCHNm0Cpx5rf" target="_blank" rel="noopener"><div><span>Google, Angoulême · 144 avis</span><span class="stars" aria-hidden="true">★★★★★</span></div><b>4,9/5</b></a>
+      <a class="score" href="https://share.google/32H5D1uRiKfB9meim" target="_blank" rel="noopener"><div><span>Google, Royan · 44 avis</span><span class="stars" aria-hidden="true">★★★★★</span></div><b>5,0/5</b></a>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
   <h2>Où intervenons-nous ?</h2>
-  <p class="lead">Dans toute la région.</p>
+  <p class="lead">Dans six départements du Centre-Ouest.</p>
   <div class="zones"><span>Charente (16)</span><span>Charente-Maritime (17)</span><span>Vienne (86)</span><span>Deux-Sèvres (79)</span><span>Dordogne (24)</span><span>Haute-Vienne (87)</span></div>
 </div></section>
 
-<section style="background:#fff"><div class="wrap">
-  <h2>Questions fréquentes</h2><p class="lead"></p>
-  <details><summary>Le devis est-il vraiment gratuit ?</summary><p>Oui. Le devis est gratuit et sans engagement : vous décidez ensuite si vous souhaitez poursuivre.</p></details>
-  <details><summary>Qui va me rappeler ?</summary><p>Un artisan de la société PLOMBIER 16, qui édite ce site. Il vous appelle pour comprendre votre projet avant de vous établir un devis.</p></details>
-  <details><summary>Sous quel délai suis-je rappelé(e) ?</summary><p>Nous rappelons du lundi au samedi, généralement sous un jour ouvré.</p></details>
-  <details><summary>Que deviennent mes données ?</summary><p>Elles servent uniquement à traiter votre demande. Elles ne sont ni revendues ni cédées. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
+<section style="padding-top:20px"><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <div class="faq" style="margin-top:28px">
+    <details><summary>Le devis est-il vraiment gratuit ?</summary><p>Oui. Il est gratuit et sans engagement. Vous décidez ensuite si vous voulez continuer.</p></details>
+    <details><summary>Qui me rappelle ?</summary><p>Un artisan de la société PLOMBIER 16, qui édite ce site et réalise elle-même les travaux. Il vous appelle pour comprendre votre projet avant de vous établir un devis.</p></details>
+    <details><summary>Quand serai-je rappelé(e) ?</summary><p>Nous rappelons du lundi au samedi, en général sous un jour ouvré.</p></details>
+    <details><summary>Que deviennent mes données ?</summary><p>Elles servent uniquement à traiter votre demande. Elles ne sont ni vendues ni cédées. Détails dans la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
+  </div>
 </div></section>
 
 <footer><div class="wrap">
-  <b style="color:#fff">Confort Habitat Devis</b> est un site édité par la SAS PLOMBIER 16, qui réalise elle-même les travaux.<br>
-  107 rue de l'Abbé Rousselot, 16000 Angoulême · Tél. 06 33 82 72 71 · SIREN 901 698 936<br>
+  <div class="thermo" aria-hidden="true"></div>
+  <b>Confort Habitat Devis</b>
+  Site édité par la SAS PLOMBIER 16, qui réalise elle-même les travaux.<br>
+  107 rue de l'Abbé Rousselot, 16000 Angoulême · 06 33 82 72 71 · SIREN 901 698 936<br><br>
   <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a>
 </div></footer>
 
 <script>
 // Adresse du service qui reçoit le formulaire et le transmet par email (renseignée à la mise en ligne)
 var FORM_ENDPOINT="__FORM_ENDPOINT__";
-var form=document.getElementById("lead"),msg=document.getElementById("msg");
-form.addEventListener("submit",function(e){
-  e.preventDefault();msg.className="msg";msg.style.display="none";
-  var projets=[].slice.call(form.querySelectorAll('input[name="projet"]:checked')).map(function(i){return i.value});
-  if(!projets.length){return err("Merci de cocher au moins un projet.")}
-  if(form.botcheck.value){return}
-  var nom=form.nom.value.trim(),tel=form.telephone.value.trim(),mail=form.email.value.trim();
-  if(!form.departement.value||!form.commune.value.trim()||!nom||!tel||!mail){return err("Merci de remplir tous les champs obligatoires.")}
-  if(!/^[0-9 +().-]{9,}$/.test(tel)){return err("Le numéro de téléphone semble incorrect.")}
-  if(!/^\S+@\S+\.\S+$/.test(mail)){return err("L'adresse email semble incorrecte.")}
-  if(!document.getElementById("rgpd").checked){return err("Merci de cocher la case d'acceptation.")}
-  var btn=form.querySelector("button");btn.disabled=true;btn.textContent="Envoi en cours…";
-  var data={subject:"Nouvelle demande de devis – "+projets.join(", "),from_name:"Confort Habitat Devis",
-    projets:projets.join(", "),departement:form.departement.value,commune:form.commune.value.trim(),
-    nom:nom,telephone:tel,email:mail,message:form.message.value.trim()||"(aucun)"};
-  fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(data)})
-   .then(function(r){return r.json()}).then(function(j){
-     if(j&&j.success!==false){form.reset();msg.className="msg ok";msg.textContent="Merci ! Votre demande est bien reçue. Un artisan vous rappelle très vite."}
-     else{throw 0}
-   }).catch(function(){err("Une erreur est survenue. Vous pouvez nous appeler au 06 33 82 72 71.")})
-   .finally(function(){btn.disabled=false;btn.textContent="Recevoir mon devis gratuit"});
-});
+var form=document.getElementById("lead"),msg=document.getElementById("msg"),
+    steps=[].slice.call(form.querySelectorAll(".step")),bars=[].slice.call(form.querySelectorAll(".prog i")),
+    next=document.getElementById("next"),prev=document.getElementById("prev"),label=document.getElementById("stepname"),cur=0,sending=false;
+var names=["Étape 1 sur 3 · Votre projet","Étape 2 sur 3 · Votre logement","Étape 3 sur 3 · Vos coordonnées"];
+function show(i){cur=i;steps.forEach(function(s,k){s.classList.toggle("on",k===i)});bars.forEach(function(b,k){b.classList.toggle("on",k<=i)});
+  label.textContent=names[i];prev.style.visibility=i?"visible":"hidden";next.textContent=i===2?"Envoyer ma demande":"Continuer";msg.className="msg";
+  if(i){form.scrollIntoView({behavior:"smooth",block:"start"})}}
 function err(t){msg.className="msg ko";msg.textContent=t}
+function projets(){return [].slice.call(form.querySelectorAll('input[name="projet"]:checked')).map(function(x){return x.value})}
+function valid(i){
+  if(i===0&&!projets().length){err("Cochez au moins un projet pour continuer.");return false}
+  if(i===1&&(!form.departement.value||!form.commune.value.trim())){err("Indiquez votre département et votre commune.");return false}
+  if(i===2){
+    if(!form.nom.value.trim()){err("Indiquez votre nom et prénom.");return false}
+    if(!/^[0-9 +().-]{9,}$/.test(form.telephone.value.trim())){err("Le numéro de téléphone semble incorrect. Exemple : 06 12 34 56 78.");return false}
+    if(!/^\S+@\S+\.\S+$/.test(form.email.value.trim())){err("L'adresse email semble incorrecte. Exemple : nom@exemple.fr.");return false}
+    if(!document.getElementById("rgpd").checked){err("Cochez la case d'acceptation pour envoyer votre demande.");return false}
+  }
+  return true}
+prev.addEventListener("click",function(){if(cur>0)show(cur-1)});
+next.addEventListener("click",function(){
+  if(sending||!valid(cur))return;
+  if(cur<2){return show(cur+1)}
+  if(form.botcheck.value)return;
+  sending=true;next.disabled=true;next.textContent="Envoi en cours…";
+  var p=projets();
+  fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({
+    _subject:"Nouvelle demande de devis : "+p.join(", "),_template:"table",
+    projets:p.join(", "),departement:form.departement.value,commune:form.commune.value.trim(),
+    nom:form.nom.value.trim(),telephone:form.telephone.value.trim(),email:form.email.value.trim(),message:form.message.value.trim()||"(aucun)"})})
+  .then(function(r){if(!r.ok)throw 0;return r.json()})
+  .then(function(){form.querySelectorAll(".step,.actions,.fine,.prog,.stepname").forEach(function(e){e.style.display="none"});
+    msg.className="msg ok";msg.innerHTML="Merci, votre demande est bien reçue. Un artisan vous rappelle du lundi au samedi.";form.scrollIntoView({behavior:"smooth",block:"start"})})
+  .catch(function(){err("L'envoi n'a pas abouti. Réessayez, ou appelez-nous au 06 33 82 72 71.")})
+  .finally(function(){sending=false;next.disabled=false;if(cur===2)next.textContent="Envoyer ma demande"});
+});
 </script>
 </body>
 </html>
