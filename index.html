@@ -362,10 +362,11 @@ next.addEventListener("click",function(){
   var p=projets();
   var ctl=new AbortController();var to=setTimeout(function(){ctl.abort()},12000);
   fetch(FORM_ENDPOINT,{method:"POST",signal:ctl.signal,headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({
-    access_key:ACCESS_KEY,subject:"Nouvelle demande de devis : "+p.join(", "),from_name:"Confort Habitat Devis",
-    name:form.nom.value.trim(),email:form.email.value.trim(),
-    projets:p.join(", "),departement:form.departement.value,commune:form.commune.value.trim(),
-    telephone:form.telephone.value.trim(),message:form.message.value.trim()||"(aucun)"})})
+    access_key:ACCESS_KEY,from_name:"Confort Habitat Devis",replyto:form.email.value.trim(),
+    subject:"Nouveau devis : "+p.join(", ")+" · "+form.commune.value.trim()+" ("+form.departement.value.replace(/^.*\((\d+)\)$/,"$1")+")",
+    "Nom":form.nom.value.trim(),"Téléphone":form.telephone.value.trim(),"Email":form.email.value.trim(),
+    "Projets souhaités":p.join(", "),"Département":form.departement.value,"Commune":form.commune.value.trim(),
+    "Message du client":form.message.value.trim()||"Aucun message"})})
   .then(function(r){return r.json()})
   .then(function(d){if(!d||!d.success)throw 0;form.querySelectorAll(".step,.actions,.fine,.prog,.stepname").forEach(function(e){e.style.display="none"});
     msg.className="msg ok";msg.innerHTML="Merci, votre demande est bien reçue. Un artisan vous rappelle du lundi au samedi.";form.scrollIntoView({behavior:"smooth",block:"start"})})
