@@ -223,6 +223,40 @@ header{position:static}
 .cards .c svg{width:24px;height:24px}
 .cards .c:after{right:8px;width:18px;height:18px;margin-top:-9px}
 @media (max-width:980px){.cards .c{padding:10px 30px 10px 12px}.cards .t{font-size:13.5px}}
+
+/* ===== couleur : haut de page bleu profond, accents orange, sections teintées ===== */
+:root{--sky:#1c6fa3;--aqua:#2fa7c9;--sun:#ffb347;--blush:#fff1e3;--ice:#e6f3fa}
+body{background:#fff}
+header{background:#0a2f47}
+.brand{color:#fff}
+.tel{color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.38)}
+.tel:hover{background:rgba(255,255,255,.22);border-color:#fff}
+.top{background:radial-gradient(760px 420px at 100% 100%,rgba(255,179,71,.42),transparent 62%),radial-gradient(700px 420px at 0% 0%,rgba(47,167,201,.38),transparent 60%),linear-gradient(180deg,#0a2f47,#0f4a6e 45%,#13628f);padding:14px 0 64px;color:#fff}
+.pitch h1{color:#fff}
+.checks{color:#e8f4fa}
+.checks li:before{background-color:var(--sun);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a2f47' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>")}
+.formcard{box-shadow:0 34px 80px -24px rgba(0,0,0,.55);border-top:6px solid var(--sun)}
+.prog i.on{background:linear-gradient(90deg,var(--aqua),var(--sun))}
+.stepname{color:var(--sky);font-weight:600}
+.cards .c{background:var(--ice);border-color:#cfe6f2}
+.cards .c svg{color:var(--sky)}
+.cards label:hover .c{border-color:var(--aqua);background:#dceef8}
+.cards input:checked + .c{background:linear-gradient(180deg,var(--blush),#fff);border-color:var(--flame)}
+.btn{background:linear-gradient(135deg,var(--sun),var(--flame));color:#2a1204}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--sky);box-shadow:0 0 0 4px rgba(47,167,201,.28)}
+/* sections suivantes */
+section{position:relative}
+.how{background:var(--ice)}
+.flow .dot{background:linear-gradient(135deg,var(--aqua),var(--sky));border:0;color:#fff;box-shadow:0 10px 24px -8px rgba(28,111,163,.6)}
+.flow div:nth-child(3) .dot{background:linear-gradient(135deg,var(--sun),var(--flame));box-shadow:0 10px 24px -8px rgba(228,115,58,.6)}
+.flow h3{color:var(--sky)}
+.zonesec{background:#fff}
+.zones span{background:var(--ice);border-color:#cfe6f2;color:var(--sky)}
+.faqsec{background:var(--blush)}
+summary:after{color:var(--flame)}
+details{border-color:#f1d6bc}
+footer{background:linear-gradient(135deg,#0a2f47,#0f4a6e)}
+@media (max-width:980px){.top{padding-bottom:44px}.actions{background:rgba(255,255,255,.96)}}
 </style>
 </head>
 <body>
@@ -296,7 +330,7 @@ header{position:static}
   </div>
 </div></main>
 
-<section style="padding-top:20px"><div class="wrap">
+<section class="how"><div class="wrap">
   <h2 style="text-align:center">Simple du début à la fin</h2>
   <p class="lead" style="margin-inline:auto;text-align:center">Vous choisissez, on vous rappelle, vous recevez un devis clair.</p>
   <div class="flow">
@@ -306,13 +340,13 @@ header{position:static}
   </div>
 </div></section>
 
-<section style="padding-top:20px"><div class="wrap">
+<section class="zonesec"><div class="wrap">
   <h2>Où intervenons-nous ?</h2>
   <p class="lead">Dans toute la région Nouvelle-Aquitaine, 12 départements.</p>
   <div class="zones"><span>Charente (16)</span><span>Charente-Maritime (17)</span><span>Corrèze (19)</span><span>Creuse (23)</span><span>Dordogne (24)</span><span>Gironde (33)</span><span>Landes (40)</span><span>Lot-et-Garonne (47)</span><span>Pyrénées-Atlantiques (64)</span><span>Deux-Sèvres (79)</span><span>Vienne (86)</span><span>Haute-Vienne (87)</span></div>
 </div></section>
 
-<section style="padding-top:20px"><div class="wrap">
+<section class="faqsec"><div class="wrap">
   <h2>Questions fréquentes</h2>
   <div class="faq" style="margin-top:28px">
     <details><summary>Le devis est-il vraiment gratuit ?</summary><p>Oui. Il est gratuit et sans engagement. Vous décidez ensuite si vous voulez continuer.</p></details>
