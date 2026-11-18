@@ -359,7 +359,8 @@ next.addEventListener("click",function(){
   if(form.botcheck.value)return;
   sending=true;next.disabled=true;next.textContent="Envoi en cours…";
   var p=projets();
-  fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({
+  var ctl=new AbortController();var to=setTimeout(function(){ctl.abort()},12000);
+  fetch(FORM_ENDPOINT,{method:"POST",signal:ctl.signal,headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({
     _subject:"Nouvelle demande de devis : "+p.join(", "),_template:"table",
     projets:p.join(", "),departement:form.departement.value,commune:form.commune.value.trim(),
     nom:form.nom.value.trim(),telephone:form.telephone.value.trim(),email:form.email.value.trim(),message:form.message.value.trim()||"(aucun)"})})
@@ -367,7 +368,7 @@ next.addEventListener("click",function(){
   .then(function(){form.querySelectorAll(".step,.actions,.fine,.prog,.stepname").forEach(function(e){e.style.display="none"});
     msg.className="msg ok";msg.innerHTML="Merci, votre demande est bien reçue. Un artisan vous rappelle du lundi au samedi.";form.scrollIntoView({behavior:"smooth",block:"start"})})
   .catch(function(){err("L'envoi n'a pas abouti. Réessayez, ou appelez-nous au 06 33 82 72 71.")})
-  .finally(function(){sending=false;next.disabled=false;if(cur===2)next.textContent="Envoyer ma demande"});
+  .finally(function(){clearTimeout(to);sending=false;next.disabled=false;if(cur===2)next.textContent="Envoyer ma demande"});
 });
 </script>
 </body>
