@@ -332,7 +332,8 @@ header{position:static}
 
 <script>
 // Adresse du service qui reçoit le formulaire et le transmet par email (renseignée à la mise en ligne)
-var FORM_ENDPOINT="https://formsubmit.co/ajax/plombier16charente@gmail.com";
+var FORM_ENDPOINT="https://api.web3forms.com/submit";
+var ACCESS_KEY="86f6ad50-8dc5-4c58-90ed-7357edf22dda";
 var form=document.getElementById("lead"),msg=document.getElementById("msg"),
     steps=[].slice.call(form.querySelectorAll(".step")),bars=[].slice.call(form.querySelectorAll(".prog i")),
     next=document.getElementById("next"),prev=document.getElementById("prev"),label=document.getElementById("stepname"),cur=0,sending=false;
@@ -361,11 +362,12 @@ next.addEventListener("click",function(){
   var p=projets();
   var ctl=new AbortController();var to=setTimeout(function(){ctl.abort()},12000);
   fetch(FORM_ENDPOINT,{method:"POST",signal:ctl.signal,headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({
-    _subject:"Nouvelle demande de devis : "+p.join(", "),_template:"table",
+    access_key:ACCESS_KEY,subject:"Nouvelle demande de devis : "+p.join(", "),from_name:"Confort Habitat Devis",
+    name:form.nom.value.trim(),email:form.email.value.trim(),
     projets:p.join(", "),departement:form.departement.value,commune:form.commune.value.trim(),
-    nom:form.nom.value.trim(),telephone:form.telephone.value.trim(),email:form.email.value.trim(),message:form.message.value.trim()||"(aucun)"})})
-  .then(function(r){if(!r.ok)throw 0;return r.json()})
-  .then(function(){form.querySelectorAll(".step,.actions,.fine,.prog,.stepname").forEach(function(e){e.style.display="none"});
+    telephone:form.telephone.value.trim(),message:form.message.value.trim()||"(aucun)"})})
+  .then(function(r){return r.json()})
+  .then(function(d){if(!d||!d.success)throw 0;form.querySelectorAll(".step,.actions,.fine,.prog,.stepname").forEach(function(e){e.style.display="none"});
     msg.className="msg ok";msg.innerHTML="Merci, votre demande est bien reçue. Un artisan vous rappelle du lundi au samedi.";form.scrollIntoView({behavior:"smooth",block:"start"})})
   .catch(function(){err("L'envoi n'a pas abouti. Réessayez, ou appelez-nous au 06 33 82 72 71.")})
   .finally(function(){clearTimeout(to);sending=false;next.disabled=false;if(cur===2)next.textContent="Envoyer ma demande"});
